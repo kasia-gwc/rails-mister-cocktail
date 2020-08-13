@@ -1,6 +1,7 @@
 class DosesController < ApplicationController
   def new
     @dose = Dose.new()
+    @cocktail = Cocktail.find(params[:cocktail_id])
   end
 
   def create
@@ -21,4 +22,5 @@ class DosesController < ApplicationController
 
   def dose_params
     params.require(:dose).params(:ingredients)
+  end
 end
