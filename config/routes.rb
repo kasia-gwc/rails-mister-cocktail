@@ -3,6 +3,6 @@ Rails.application.routes.draw do
     resources :doses, only: [:new, :create]
   end
   resources :doses, only: [:destroy]
-  root to: 'cocktail#index'
+  root to: 'cocktails#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
