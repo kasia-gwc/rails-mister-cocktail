@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+  <p>
+    <strong>Name:</strong>
+   <%= @cocktail.name %>
+  </p>
+</div>
 
-<p>
-  <strong>Name:</strong>
- <%= @cocktail.name %>
-</p>
   <strong>Ingredients:</strong>
  <% @cocktail.doses.each do |dose| %>
  <p>
@@ -11,6 +13,8 @@
   <%= dose.ingredient.name %>
 </p>
  <% end %>
+
+
  <br>
 
 <%= link_to 'Back', cocktails_path %>
