@@ -1,19 +1,46 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+<div class="navbar-lewagon navbar-fixed-top">
+  <a class="navbar-brand" href="">
+    <i id="logo" class="fas fa-cocktail fa-2x"></i>
+  </a>
+</div>
+<div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/banner.jpeg);">
+  <div class="banner-content">
+    <h1>Great to see you back!</h1>
+    <h2>
+      <span id="banner-typed-text">Let's have a drink, shall we?</span>
+      <span class="typed-cursor typed-cursor--blink">|</span>
+    </h2>
+    <div class="down-section text-center">
+      <h2>
+        <a href="#go-down">
+         <i class="fas fa-caret-down"></i>
+        </a>
+      </h2>
+    </div>
   </div>
 </div>
-
-<div class="container">
-  <h1>All the cocktails</h1>
-  <% @cocktails.each do |cocktail|%>
-  <p><%= cocktail.name %></p>
-  <td><%= link_to 'Show', cocktail %></td>
-  <% end %>
-<p>
-  <%= link_to "Create a cocktail", new_cocktail_path %>
-</p>
+<div id="go-down">
+  <div class="row justify-content-center m-5">
+    <h1>All the cocktails</h1>
+  </div>
+  <div class="row ml-5 mr-5">
+    <% @cocktails.each do |cocktail|%>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card-cocktail">
+        <p><%= link_to cocktail.name, cocktail %></p>
+        <td><%#= link_to 'Show', cocktail %></td>
+      </div>
+    </div>
+      <% end %>
+    <p>
+      <%= link_to "Create a cocktail", new_cocktail_path %>
+    </p>
+  </div>
+  <div class="text-center">
+    <h2>
+      <a href="#banner">
+        <i class="fas fa-caret-up"></i>
+      </a>
+    </h2>
+  </div>
 </div>
-

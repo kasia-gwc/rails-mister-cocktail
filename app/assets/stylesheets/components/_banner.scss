@@ -1,0 +1,30 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 100vh;
+}
+.banner h1 {
+  margin-top: 50px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 75px;
+  font-weight: bold;
+  opacity: .9;
+}
+
+.banner h2 {
+  font-size: 40px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  padding-top: 40px;
+  } i {
+    color: #fb9616;
+    font-size: 70px;
+    padding-top: 40px;
+  }
+    i:hover {
+      opacity: .7;
+      transform: scale(1.1);
+    }
