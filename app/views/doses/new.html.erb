@@ -1,16 +1,17 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-9 col-md-8">
-      <h1>Add new dose for <%= @cocktail.name %></h1>
+    <div class="col-8 mt-5">
+      <h2>Add a new dose for</h2>
+        <h1><%= @cocktail.name %></h1>
           <%= simple_form_for [ @cocktail, @dose ] do |f| %>
             <%= f.association :ingredient, collection: Ingredient.order(:name), prompt: "Pick one" %>
-            <%= f.input :description %>
-            <%= f.submit "Add dose", class: "btn btn-success" %>
+            <%= f.input :description, placeholder: "Quantity ingredient" %>
+            <%= f.submit "Add dose", class: "btn btn-warning" %>
           <% end %>
     </div>
   </div>
-<%= link_to 'Back', cocktails_path %>
-<%= link_to "Create doses", new_cocktail_dose_path(@cocktail) %>
+  <br>
+  <%= link_to 'Back', url_for(:back), class: "btn btn-outline-warning" %>
 </div>
 
 

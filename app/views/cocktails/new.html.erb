@@ -1,12 +1,21 @@
+<div class="navbar-lewagon navbar-fixed-top">
+  <%= link_to root_path, class: "navbar-brand d-flex" do %>
+    <i id="logo" class="fas fa-cocktail fa-2x"></i>
+    <% end %>
+    <a class="navbar-brand" href=""></a>
+</div>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-xs-6 col-xs-offset-3">
+    <div class="col-7 col-xs-offset-3 mt-5">
+        <h2>Add a new cocktail 🍹</h2>
+        <br>
       <%= simple_form_for(@cocktail) do |f| %>
-        <%= f.input :name, label: false, placeholder: "Add cocktail name"  %>
-        <%= f.input :content, label: false, placeholder: "Add cocktail description" %>
+        <%= f.input :name, label: false, placeholder: "Cocktail name"  %>
+        <%= f.input :content, label: false, placeholder: "Cocktail description" %>
         <%= f.input :photo, label: false, as: :file %>
-        <%= f.button :submit, class: "btn btn-lg btn-info btn-black"%>
+        <%= f.button :submit, class: "btn btn-lg btn-warning"%>
       <% end %>
+      <br>
       <style>
       .form-control {
         font-family: 'Shadows Into Light' !important;

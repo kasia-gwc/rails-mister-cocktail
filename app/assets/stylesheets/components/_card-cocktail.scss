@@ -1,5 +1,6 @@
-.card-cocktail{
-  height: 300px;
+.card-cocktail {
+  height: 60vh;
+  width: auto;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
@@ -8,4 +9,54 @@
   margin: 15px 0px;
   box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
   padding: 0 5px 0 5px;
+  border-radius: 2px;
+    a {
+    color: #fb9616;
+    padding-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+    }
+}
+
+.ingredient-card {
+  height: 500px;
+  width: 400px;
+}
+
+.card.ingredient {
+  height: 110px;
+  width: 110px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
+  color: black;
+  position: relative;
+  margin: 0px 15px;
+  border-radius: 2px;
+  box-shadow: 0px;
+  background-color: #F4F4F4;
+  text-align: center;
+     h5 {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    margin-top: 10px;
+    color: gray;
+    padding: 0;
+}
+.far {
+  color: gray;
+  text-decoration: none;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+}
+
+.card-description h1 {
+      padding-top: 30px;
+
 }
