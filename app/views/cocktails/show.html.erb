@@ -8,13 +8,13 @@
   <div class="text-center">
     <div class="row">
       <div class="col-6">
-        <% if @cocktail.photo.present? %>
-        <div class="card-cocktail" id="img-cocktail" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.2)), url('<%= cl_image_path @cocktail.photo height: 900, width: 800, crop: :fill %>');">
+        <h1 style="color: #fb9616;"><strong><%= @cocktail.name %></strong></h1>
+       <% if @cocktail.photo.attached? %>
+              <div class="card-cocktail-show" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= cl_image_path @cocktail.photo.key %>)">
           <% else %>
-          <div class="card-cocktail" id="img-cocktail" style="background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.2)), url('https://source.unsplash.com/600x600/?cocktail, beverages, <%= @cocktail.name %> ');">
-            <% end %>
+              <div class="card-cocktail-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/assets/sex_on.jpg)">
+          <% end %>
             <div class="card-description">
-              <h1><strong><%= @cocktail.name %></strong></h1>
               <h6><%= @cocktail.content %></h6>
               </div>
             </div>
@@ -27,7 +27,7 @@
                 <% @cocktail.doses.each do |dose| %>
                 <div class="col-3 card ingredient">
                   <div class="card-body ingredient">
-                    <h5 class="card-title ingredient"><%= dose.ingredient.name %></h5>
+                    <h4 class="card-title ingredient"><%= dose.ingredient.name %></h4>
                     <p class="card-subtitle mb-2 text-muted ingredient"><%= dose.description %></p>
                     <!-- <p class="card-text ingredient">Description</p> -->
                     <%= link_to dose_path(dose),
@@ -41,6 +41,10 @@
               <hr>
               <%= link_to "Add new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-warning" %>
               <%= link_to 'Back', url_for(:back), class: "btn btn-outline-warning" %>
+            </div>
+            <br>
+            <div>
+              <h2>Ratings</h2>
             </div>
           </div>
         </div>

@@ -2,11 +2,12 @@
   <a class="navbar-brand" href="">
     <i id="logo" class="fas fa-cocktail fa-2x"></i>
   </a>
-      <h2><strong><%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-outline-warning mt-5" %></strong></h2>
+      <h2><%= link_to "Add cocktail", new_cocktail_path, class: "btn btn-lg btn-outline-warning mt-5" %></h2>
 </div>
 <div class="banner text-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/assets/banner.jpeg);">
   <div class="banner-content">
-    <h1>Great to see you back!</h1>
+    <h1>Good to see you!</h1>
+    <br>
     <h2>
       <span id="banner-typed-text">Let's have a drink, shall we?</span>
       <span class="typed-cursor typed-cursor--blink">|</span>
@@ -20,21 +21,23 @@
     </div>
   </div>
 </div>
-<div id="go-down">
+<div class="container" id="go-down">
   <div class="row justify-content-center m-5">
     <h1>All the cocktails</h1>
   </div>
   <div class="row ml-5 mr-5">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= link_to cocktail_path(cocktail) do %>
           <% if cocktail.photo.attached? %>
-              <div class="card-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key) %>)">
+              <div class="card-cocktail linkable" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url(<%= cl_image_path(cocktail.photo.key) %>)">
           <% else %>
               <div class="card-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/assets/sex_on.jpg)">
           <% end %>
-          <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+          <h3><%= cocktail.name %></h3>
               </div>
               </div>
+        <% end %>
     <% end %>
       </div>
   </div>
@@ -45,3 +48,4 @@
       </a>
     </h2>
   </div>
+</div>
