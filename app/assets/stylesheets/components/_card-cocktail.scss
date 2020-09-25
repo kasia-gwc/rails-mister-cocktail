@@ -24,6 +24,11 @@
       opacity: 1;
     }
 }
+
+.card-cocktail i {
+  font-size: 1.25em;
+  margin-top: 38vh;
+}
 .card-cocktail:hover {
   opacity: 1;
   transform: scale(1.09);
@@ -95,3 +100,39 @@ h1,h2,h3 {
   color: lightgray;
   text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 }
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0; }
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating-container {
+  display: inline-block;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > label {
+  color: lightgray;
+ float: right;
+}
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: orange;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: lightgray;  }
