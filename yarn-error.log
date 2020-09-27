@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/14.12.0/bin/node /usr/local/Cellar/yarn/1.22.5/libexec/bin/yarn.js add typed.js
+  /usr/local/Cellar/node/14.12.0/bin/node /usr/local/Cellar/yarn/1.22.5/libexec/bin/yarn.js uninstall
 
 PATH: 
   /Users/kasiagawelko/.rbenv/versions/2.6.6/bin:/usr/local/Cellar/rbenv/1.1.2/libexec:./bin:./node_modules/.bin:/Users/kasiagawelko/.pyenv/bin:/Users/kasiagawelko/.rbenv/shims:/Users/kasiagawelko/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
