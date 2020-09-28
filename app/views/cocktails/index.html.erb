@@ -31,7 +31,7 @@
       <div class="col-xs-12 col-sm-6 col-md-4">
         <%= link_to cocktail_path(cocktail) do %>
           <% if cocktail.photo.attached? %>
-              <div class="card-cocktail linkable" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url(<%= cl_image_path(cocktail.photo.key) %>)">
+              <div class="card-cocktail linkable" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url(<%= cl_image_path(cocktail.photo.key) %>)">
           <% else %>
               <div class="card-cocktail" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(/assets/sex_on.jpg)">
           <% end %>
